@@ -1,3 +1,63 @@
+
+//Cheatsheet Arrays
+
+Creating an Array:
+let fruits = ['apple', 'banana', 'cherry'];
+
+Accessing Elements:
+let thirdFruit = fruits[2]; // arrays start at 0, so index 2 is the third element
+
+Array Length:
+let length = fruits.length;
+
+Adding Elements:
+fruits.push('date'); // adds to the end
+fruits.unshift('elderberry'); // adds to the beginning
+
+Removing Elements:
+let lastFruit = fruits.pop(); // removes from the end
+let firstFruit = fruits.shift(); // removes from the beginning
+
+Index of an Element:
+let bananaIndex = fruits.indexOf('banana');
+
+Looping through an Array:
+for(let i = 0; i < fruits.length; i++) {
+  console.log(fruits[i]);
+}
+
+
+
+//Cheatsheet Objects
+
+Creating an Object:
+let car = {
+  make: 'Toyota',
+  model: 'Corolla',
+  year: 2020
+};
+
+Accessing Properties:
+let model = car.model; // Dot notation
+let make = car['make']; // Bracket notation
+
+Adding/Updating Properties:
+car.color = 'blue'; // adds a new property 'color'
+car.make = 'Honda'; // updates the value of 'make'
+
+Deleting Properties:
+delete car.year;
+
+Checking a Property:
+'color' in car; // returns true if 'color' is a property in car
+
+Looping through an Object:
+for(let key in car) {
+  console.log(key, car[key]);
+}
+
+
+
 //Arrays and Objects:
 //Array Methods:
 

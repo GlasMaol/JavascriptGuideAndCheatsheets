@@ -1,3 +1,25 @@
+
+Cheatsheet
+
+Function declaration:
+function functionName(parameters) {
+  // code to be executed
+}
+
+
+Function expression:
+let functionName = function(parameters) {
+  // code to be executed
+};
+
+
+Arrow function:
+let functionName = (parameters) => {
+  // code to be executed
+};
+
+
+
 Functions:
 
 

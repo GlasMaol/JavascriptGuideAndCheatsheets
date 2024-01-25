@@ -1,3 +1,37 @@
+
+//Cheatsheet
+
+Selecting an Element:
+let element = document.getElementById('elementId'); // by id
+let elements = document.getElementsByClassName('className'); // by class
+let elements = document.getElementsByTagName('tagName'); // by tag name
+let element = document.querySelector('#elementId'); // first match of a CSS-style query
+let elements = document.querySelectorAll('.className'); // all matches of a CSS-style query
+
+Changing Text and HTML:
+element.textContent = 'New text'; // changes only the text of an element
+element.innerHTML = '<span>New HTML</span>'; // changes the HTML inside an element
+
+Adding and Removing Classes:
+element.classList.add('newClass'); // adds a class
+element.classList.remove('oldClass'); // removes a class
+element.classList.toggle('toggleClass'); // toggles a class
+
+Changing Attributes:
+element.setAttribute('attributeName', 'newValue'); // sets the value of an attribute
+let attributeValue = element.getAttribute('attributeName'); // gets the value of an attribute
+element.removeAttribute('attributeName'); // removes an attribute
+
+Creating and Adding Elements:
+let newElement = document.createElement('tagName'); // creates a new element
+element.appendChild(newElement); // adds the new element as the last child of an element
+element.insertBefore(newElement, referenceElement); // inserts the new element before a reference element
+
+Removing Elements:
+element.removeChild(childElement); // removes a child element
+
+
+
 DOM Manipulation:
 Selecting Elements:
 

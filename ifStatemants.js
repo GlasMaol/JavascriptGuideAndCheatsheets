@@ -1,4 +1,31 @@
-Control Flow:
+
+Cheatsheet
+
+If statement:
+if (condition) {
+  // code to be executed if condition is true
+}
+
+
+If...else statement:
+if (condition) {
+  // code to be executed if condition is true
+} else {
+  // code to be executed if condition is false
+}
+
+
+If...else if...else statement:
+if (condition1) {
+  // code to be executed if condition1 is true
+} else if (condition2) {
+  // code to be executed if condition1 is false and condition2 is true
+} else {
+  // code to be executed if both conditions are false
+}
+
+
+Control Flow If:
 
 
 If Statement:

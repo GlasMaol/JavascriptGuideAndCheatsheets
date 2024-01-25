@@ -1,3 +1,51 @@
+
+Cheatsheet Variables
+
+var declaration:
+var variableName = value; // value can be a number, string, boolean, object, etc.
+
+
+let declaration:
+let variableName = value; // value can be a number, string, boolean, object, etc.
+
+
+const declaration:
+const variableName = value; // value can be a number, string, boolean, object, etc.
+
+
+Cheatsheet data types
+
+Number:
+let num = 123; // an integer
+let num = 12.3; // a floating point number
+
+
+String:
+let str = 'Hello, world!'; // a string of characters
+
+
+Boolean:
+let bool = true; // or false
+
+
+Null:
+let n = null; // a non-value
+
+
+Undefined:
+let und; // a variable without a value is undefined
+
+
+Object:
+let obj = {name: 'John', age: 30}; // an object with properties
+
+
+Array:
+let arr = [1, 2, 3]; // an ordered list of values
+
+
+
+
 Variables and Data Types:
 
 

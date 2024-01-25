@@ -1,4 +1,24 @@
 
+Cheatsheet
+
+Try...catch statement:
+try {
+  // code that may potentially throw an exception
+} catch (error) {
+  // code to handle the error
+}
+
+
+Try...catch...finally statement:
+try {
+  // code that may potentially throw an exception
+} catch (error) {
+  // code to handle the error
+} finally {
+  // code that will run whether an error occurred or not
+}
+
+
 Try & catch
 
 Example 1: Basic Try-Catch

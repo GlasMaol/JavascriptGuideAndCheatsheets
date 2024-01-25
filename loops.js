@@ -1,5 +1,35 @@
-Loops:
 
+//Cheatsheet
+
+For loop:
+for (let i = 0; i < 5; i++) {
+  console.log(i); // replace with your code
+}
+
+
+While loop:
+let i = 0;
+while (i < 5) {
+  console.log(i); // replace with your code
+  i++;
+}
+
+forEach loop:
+let array = ['apple', 'banana', 'cherry'];
+array.forEach(function(item) {
+  console.log(item); // replace with your code
+})
+
+Do...while loop:
+let i = 0;
+do {
+  console.log(i); // replace with your code
+  i++;
+} while (i < 5);
+
+
+
+Loops:
 
 For Loop:
 
