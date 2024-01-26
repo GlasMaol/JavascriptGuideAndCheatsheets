@@ -83,23 +83,45 @@ html
 This input field is of type "email," which means it expects a valid email address. The required attribute ensures it is not empty.
 
 
-Example 6: Using Regular Expressions for Email Validation
-javascript
-
-function validateForm() {
-    const email = document.getElementById('email').value;
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (!emailRegex.test(email)) {
-        alert('Please enter a valid email address.');
+Example 6: function validateEmail(email) {
+    // Check if the email is not empty
+    if (!email) {
         return false;
     }
 
-    // Other validation checks can be added here...
+    // Split the email by '@' to ensure there's only one '@'
+    const parts = email.split('@');
+    if (parts.length !== 2) {
+        return false;
+    }
 
-    alert('Form submitted successfully!');
+    // Check if the local part (before '@') and the domain part (after '@') are not empty
+    const localPart = parts[0];
+    const domainPart = parts[1];
+    if (!localPart || !domainPart) {
+        return false;
+    }
+
+    // Check if the domain part contains a dot (period)
+    if (domainPart.indexOf('.') === -1) {
+        return false;
+    }
+
     return true;
 }
-//This JavaScript function uses a regular expression (emailRegex) to validate that the entered email address has a valid format.
+
+// Example usage:
+const email = "example@example.com";
+if (validateEmail(email)) {
+    console.log("Valid email address");
+} else {
+    console.log("Invalid email address");
+}
+This function validateEmail() takes an email address as input and performs the following checks:
+
+Ensures the email is not empty.
+Splits the email into local and domain parts using the '@' symbol. There should be exactly two parts.
+Verifies that both the local part and the domain part are not empty.
+Checks if the domain part contains a dot (period), which indicates a valid domain.
 
 //These examples cover different aspects of form validation, including checking for non-empty fields, password length, and email format. You can combine and customize these techniques based on your specific form validation requirements.
