@@ -15,11 +15,31 @@ function displaySuggestions(suggestions) {
     const suggestionList = document.getElementById('suggestionList');
     suggestionList.innerHTML = ''; //rensar föregående sökning
 
+    const infoSection = document.getElementById('infoSection');
+    suggestionList.innerHTML = '';
+
     //visar nya förslag.
     suggestions.forEach(suggestion => {
         const listItem = document.createElement('li');
         listItem.textContent = suggestion.name;
+        listItem.dataset.suggestion = JSON.stringify(suggestion); //lagra hela objektet på listItem
         suggestionList.appendChild(listItem);
+        listItem.addEventListener('click', () => {
+            const suggestion = JSON.parse(listItem.dataset.suggestion);
+
+            //skapa nya paragrafer
+            const namePara = document.createElement('p');
+            const cityPara = document.createElement('p');
+
+            //sätt texten till namn och stad
+            namePara.textContent = suggestion.name;
+            cityPara.textContent = suggestion.city;
+
+            //rensa infoSection och lägg till de nya paragraferna
+            infoSection.innerHTML = '';
+            infoSection.appendChild(namePara);
+            infoSection.appendChild(cityPara);
+        });
     });
 }
 
