@@ -1,8 +1,13 @@
 // function som utför en sökfunktion på en API. I denna ex. är det name vi vill ha bara.
-async function fetchdata(searchTerm) {
-    const response = await fetch(`https://api.example.com/search?name${searchTerm}`);
-    const data = await response.json();
-    return data;
+async function fetchData(searchTerm) {
+    try {
+        const response = await fetch(`https://api.example.com/search?name=${searchTerm}`);
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error fetching data:', error);
+        throw error;
+    }
 }
 
 //returnera förslag
@@ -13,7 +18,7 @@ function displaySuggestions(suggestions) {
     //visar nya förslag.
     suggestions.forEach(suggestion => {
         const listItem = document.createElement('li');
-        listItem.textContent = suggestions.name;
+        listItem.textContent = suggestion.name;
         suggestionList.appendChild(listItem);
     });
 }
